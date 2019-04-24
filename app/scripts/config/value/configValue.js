@@ -1,4 +1,3 @@
 angular.module("quitandaApp").value("configValue", {
-	baseUrl: "http://localhost:8090/"
-	//baseUrl: ""
+	baseUrl: "http://localhost:8090"
 });

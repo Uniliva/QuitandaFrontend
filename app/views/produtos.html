@@ -1,33 +1,40 @@
-<div class="jumbotron" style="height: 100%;">
-    <h4 class="negrito">
-        Página de produtos
-    </h4>
-    <span ng-show="carregando">Carregando...</span>
-    <table class="tabela table-striped table-bordered" style="margin-top: 15px;">
-        <tr>
-            <td class="coluna negrito">Nome</td>
-            <td class="coluna negrito">Descrição</td>
-            <td class="coluna negrito">Peso</td>
-            <td class="coluna negrito">Calorias</td>
-            <td class="coluna negrito">Categoria</td>
-        </tr>
-        <tr ng-repeat="fruta in lista_dados_tabela">
-            <td class="coluna">
-                {{fruta.nome}}
-            </td>
-            <td class="coluna">
-                {{fruta.descricao}}
-            </td>
-            <td class="coluna">
-                {{fruta.pesoMedio | number: 0}}
-            </td>
-            <td class="coluna">
-                {{fruta.calorias | number: 0}}
-            </td>
-            <td class="coluna">
-                {{fruta.tipoProduto.nome}}
-            </td>
-        </tr>
-    </table>
+<div >
+    <div class="panel panel-default">
+        <div class="panel-heading">Página de produtos</div>
+        <div class="panel-body">
+            <div ng-show="carregando" class="loader"></div>
+            <table ng-show="!carregando" class="table table-bordered" >
+                <tr>
+                    <td class="coluna negrito">Nome</td>
+                    <td class="coluna negrito">Descrição</td>
+                    <td class="coluna negrito">Peso</td>
+                    <td class="coluna negrito">Calorias</td>
+                    <td class="coluna negrito">Categoria</td>
+                </tr>
+                <tr ng-repeat="item in lista_dados_tabela">
+                    <td class="coluna">
+                        {{item.nome}}
+                    </td>
+                    <td class="coluna">
+                        {{item.descricao}}
+                    </td>
+                    <td class="coluna">
+                        {{item.pesoMedio | number: 0}}
+                    </td>
+                    <td class="coluna">
+                        {{item.calorias | number: 0}}
+                    </td>
+                    <td class="coluna">
+                        {{item.tipoProduto.nome}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+      </div>
+
+   
+
+   
+    
 </div>
 
