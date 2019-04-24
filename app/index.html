@@ -16,8 +16,8 @@
                 <a class="navbar-brand" >Quitanda</a>
               </div>
               <ul class="nav navbar-nav">
-                  <li><a href="#!/">Home</a></li>
-                  <li><a ng-href="#!/produtos">Produtos</a></li>
+                  <li ng-class="{ active: isActive('/')}"><a href="#!/">Home</a></li>
+                  <li ng-class="{ active: isActive('/dogs')}"><a ng-href="#!/produtos">Produtos</a></li>
                 </ul>
         </div>
       </nav>
