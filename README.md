@@ -1,3 +1,30 @@
+## Informações
+
+
+#### Executar o projeto
+
+1. Realize o clone do projeto, com o node instalado, preciso:
+  - npm install 
+  - npm install -g bower
+  - npm install -g grunt
+  - bower install
+2. Executar com o comando grunt serve
+3. url dos recursos 
+	- http://localhost:9000/#!/ - Mostra quantidade de produtos por tipo
+	- http://localhost:9000/#!/produtos - mostra a lista de produtos cadastrados
+	
+#### Melhorias realizada
+- Ajuste de layout
+- Adicionado consulta a api na tela Graficos 
+
+#### Melhorias que não deu tempo de fazer
+ - Adicionar funcionalidade de login
+ - Adicionar telas (funcionalidade) de Crud basico
+ - implemtar os testes
+
+
+<hr>
+
 ## Quitanda do Barnabé
 <cenario>
 Barnabé é um quitandeiro muito antenado nas últimas tendências de técnicas que auxiliem o seu negócio, porém nem sempre foi assim.
