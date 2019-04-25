@@ -1,40 +1,45 @@
-<div >
-    <div class="panel panel-default">
-        <div class="panel-heading">Página de produtos</div>
-        <div class="panel-body">
-            <div ng-show="carregando" class="loader"></div>
-            <table ng-show="!carregando" class="table table-bordered" >
-                <tr>
-                    <td class="coluna negrito">Nome</td>
-                    <td class="coluna negrito">Descrição</td>
-                    <td class="coluna negrito">Peso</td>
-                    <td class="coluna negrito">Calorias</td>
-                    <td class="coluna negrito">Categoria</td>
-                </tr>
-                <tr ng-repeat="item in lista_dados_tabela">
-                    <td class="coluna">
-                        {{item.nome}}
-                    </td>
-                    <td class="coluna">
-                        {{item.descricao}}
-                    </td>
-                    <td class="coluna">
-                        {{item.pesoMedio | number: 0}}
-                    </td>
-                    <td class="coluna">
-                        {{item.calorias | number: 0}}
-                    </td>
-                    <td class="coluna">
-                        {{item.tipoProduto.nome}}
-                    </td>
-                </tr>
-            </table>
+<div>
+  <div class="panel panel-default">
+    <div class="panel-heading">Página de produtos</div>
+    <div class="panel-body">
+        <div ng-switch on="carregando">
+            <div ng-switch-when="true">
+                <div ng-show="carregando" class="loader"></div>
+            </div>
+            <div ng-switch-when="false">
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Peso</th>
+                        <th>Calorias</th>
+                        <th>Categoria</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="item in lista_dados_tabela">
+                        <td>
+                          {{item.nome}}
+                        </td>
+                        <td>
+                          {{item.descricao}}
+                        </td>
+                        <td>
+                          {{item.pesoMedio | number: 0}}
+                        </td>
+                        <td>
+                          {{item.calorias | number: 0}}
+                        </td>
+                        <td>
+                          {{item.tipoProduto.nome}}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
         </div>
-      </div>
 
-   
-
-   
-    
+    </div>
+  </div>
 </div>
-

@@ -1,15 +1,5 @@
 'use strict';
-
-/**
- * @ngdoc overview
- * @name quitandaApp
- * @description
- * # quitandaApp
- *
- * Main module of the application.
- */
-angular
-  .module('quitandaApp', [
+angular.module('quitandaApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -18,8 +8,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider, $locationProvider) {
+  ]).config(function ($routeProvider, $locationProvider) {
 
     //$locationProvider.html5Mode(true);
 

@@ -16,12 +16,12 @@
                 <a class="navbar-brand" >Quitanda</a>
               </div>
               <ul class="nav navbar-nav">
-                  <li ng-class="{ active: isActive('/')}"><a href="#!/">Home</a></li>
-                  <li ng-class="{ active: isActive('/dogs')}"><a ng-href="#!/produtos">Produtos</a></li>
+                  <li ng-class="{ active:isActive('/')}"><a href="#!/">Home</a></li>
+                  <li ng-class="{ active:isActive('/dogs')}"><a ng-href="#!/produtos">Produtos</a></li>
                 </ul>
         </div>
       </nav>
-      
+
       <br/>
       <br/>
       <br/>
@@ -68,14 +68,10 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-
         <script src="scripts/config/value/configValue.js" defer></script>
         <script src="scripts/config/interceptor/yamanInterceptor.js" defer></script>
         <script src="scripts/config/interceptor/configInterceptor.js" defer></script>
-
         <script src="scripts/controllers/main.js" defer></script>
-        <script src="scripts/services/main_service.js" defer></script>
-
         <script src="scripts/controllers/produtos_controller.js" defer></script>
         <script src="scripts/services/produtos_service.js" defer></script>
         <!-- endbuild -->

@@ -1,11 +1,17 @@
-<div ng-controller="MainCtrl">
-  <canvas id="grafico-estoque" style="display: inline-block;"></canvas> 
+<div ng-show="!msgErro">
+  <canvas id="grafico-estoque" style="display: inline-block;"></canvas>
 
-  <table class = "table table-striped table-bordered">
-      <tr ng-repeat="(key, value) in prods">
-        <td>{{key}}</td>
-        <td>{{value}}</td>
-      </tr>
-
+  <table class="table table-striped table-bordered">
+    <tr ng-repeat="(key, value) in prods">
+      <td>{{key}}</td>
+      <td>{{value}}</td>
+    </tr>
   </table>
+</div>
+
+<div ng-show="msgErro">
+  <div class="alert alert-warning">
+    <strong>Danger!</strong> Não foi possivel recuperar os dados, tente novamente!
+  </div>
+
 </div>
